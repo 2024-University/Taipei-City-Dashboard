@@ -11,7 +11,6 @@ import HistoryChart from "../charts/HistoryChart.vue";
 import DownloadData from "./DownloadData.vue";
 import PreviewOriginalData from "./PreviewOriginalData.vue";
 import EmbedComponent from "./EmbedComponent.vue";
-import ChooseReport from "./chooseReport.vue";
 import ReportIssue from "./ReportIssue.vue";
 import ReportStopPower from "./ReportStopPower.vue";
 

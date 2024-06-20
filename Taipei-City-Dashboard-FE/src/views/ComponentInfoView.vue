@@ -17,7 +17,8 @@ import { useDialogStore } from "../store/dialogStore";
 import { useAuthStore } from "../store/authStore";
 
 import HistoryChart from "../components/charts/HistoryChart.vue";
-import chooseReport from "../components/dialogs/chooseReport.vue";
+import ReportIssue from "./ReportIssue.vue";
+import ReportStopPower from "./ReportStopPower.vue";
 import DownloadData from "../components/dialogs/DownloadData.vue";
 import EmbedComponent from "../components/dialogs/EmbedComponent.vue";
 
@@ -42,13 +43,11 @@ function toggleFavorite(id) {
 	}
 }
 
-function openCHreport() {
-	dialogStore.dialogs.chooseReport = true
-}
-
 onMounted(() => {
 	contentStore.getAllComponents(searchParams.value);
 });
+
+const exportid = [73,70]
 </script>
 
 <template>
@@ -131,10 +130,22 @@ onMounted(() => {
       <div class="componentinfoview-content-control">
         <button
           v-if="authStore.token"
-          @click= "openCHreport"
+          @click="
+            dialogStore.showReportIssue(
+              dialogStore.moreInfoContent.id,
+              dialogStore.moreInfoContent.index,
+              dialogStore.moreInfoContent.name
+            )
+          "
         >
           <span>flag</span>回報
         </button>
+		<button
+			v-if="authStore.token && exportid.includes(dialogStore.moreInfoContent.id)"
+			@click="openrpsPower"
+			>
+		<span>flag</span>停電回報
+		</button>
         <button
           v-if="
             dialogStore.moreInfoContent.chart_config.types[0] !==
@@ -218,7 +229,8 @@ onMounted(() => {
         </div>
       </div>
     </div>
-    <chooseReport />
+    <ReportIssue />
+	<ReportStopPower />
     <DownloadData />
     <EmbedComponent />
   </div>
