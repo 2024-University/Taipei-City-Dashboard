@@ -1,0 +1,137 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.559911,25.21014066 ]
+    },
+    "properties": {
+    "地區":"北投區",
+    "智慧電表數量":81500
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5808915,25.19535059 ]
+    },
+    "properties": {
+    "地區":"士林區",
+    "智慧電表數量":81400
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5935983,25.11514263 ]
+    },
+    "properties": {
+    "地區":"內湖區",
+    "智慧電表數量":81200
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.6142585,25.06450974 ]
+    },
+    "properties": {
+    "地區":"南港區",
+    "智慧電表數量":81300
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5697145,25.07628957 ]
+    },
+    "properties": {
+    "地區":"松山區",
+    "智慧電表數量":85000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5799588,25.04950147 ]
+    },
+    "properties": {
+    "地區":"信義區",
+    "智慧電表數量":86000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5414745,25.09286825 ]
+    },
+    "properties": {
+    "地區":"中山區",
+    "智慧電表數量":89000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5141129,25.07941318 ]
+    },
+    "properties": {
+    "地區":"大同區",
+    "智慧電表數量":81100
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5134219,25.04939594 ]
+    },
+    "properties": {
+    "地區":"中正區",
+    "智慧電表數量":87000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5052143,25.04948785 ]
+    },
+    "properties": {
+    "地區":"萬華區",
+    "智慧電表數量":81000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5438499,25.04490421 ]
+    },
+    "properties": {
+    "地區":"大安區",
+    "智慧電表數量":88000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.5972607,25.01438264 ]
+    },
+    "properties": {
+    "地區":"文山區",
+    "智慧電表數量":81600
+    }
+  }
+]
+}
