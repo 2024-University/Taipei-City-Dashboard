@@ -42,7 +42,7 @@ function openrpsPower() {
 	dialogStore.dialogs.reportStopPower = true;
 }
 
-const exportid = [73,70]
+const exportid = [73]
 </script>
 
 <template>
