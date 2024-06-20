@@ -7,7 +7,6 @@ import { useDialogStore } from "../../store/dialogStore";
 import { useAuthStore } from "../../store/authStore";
 import { useContentStore } from "../../store/contentStore";
 import DialogContainer from "./DialogContainer.vue";
-import ReportIssue from "./ReportIssue.vue";
 
 const dialogStore = useDialogStore();
 const authStore = useAuthStore();

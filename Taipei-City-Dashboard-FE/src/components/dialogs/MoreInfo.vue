@@ -11,7 +11,8 @@ import HistoryChart from "../charts/HistoryChart.vue";
 import DownloadData from "./DownloadData.vue";
 import PreviewOriginalData from "./PreviewOriginalData.vue";
 import EmbedComponent from "./EmbedComponent.vue";
-import ChooseReport from "./chooseReport.vue";
+import ReportIssue from "./ReportIssue.vue";
+import ReportStopPower from "./ReportStopPower.vue";
 
 const dialogStore = useDialogStore();
 const contentStore = useContentStore();
@@ -37,9 +38,11 @@ function getLinkTagForResource(links, index) {
 	}
 }
 
-function openCHreport() {
-	dialogStore.dialogs.chooseReport = true
+function openrpsPower() {
+	dialogStore.dialogs.reportStopPower = true;
 }
+
+const exportid = [73]
 </script>
 
 <template>
@@ -127,9 +130,22 @@ function openCHreport() {
 				<div class="moreinfo-info-control">
 					<button
 						v-if="authStore.token"
-            			@click="openCHreport"
+						@click="
+							dialogStore.showReportIssue(
+								dialogStore.moreInfoContent.id,
+								dialogStore.moreInfoContent.index,
+								dialogStore.moreInfoContent.name
+							)
+						"
 					>
 						<span>flag</span>回報
+					</button>
+
+					<button
+						v-if="authStore.token && exportid.includes(dialogStore.moreInfoContent.id)"
+						@click="openrpsPower"
+					>
+						<span>flag</span>停電回報
 					</button>
 
 					<!-- 預覽原始數據集 -->
@@ -164,8 +180,8 @@ function openCHreport() {
 						<span>code</span>內嵌
 					</button>
 				</div>
-				<ChooseReport />
-				<PreviewOriginalData />
+				<ReportIssue />
+				<ReportStopPower />
 				<DownloadData />
 				<EmbedComponent />
 			</div>
@@ -175,6 +191,27 @@ function openCHreport() {
 		<!-- 預覽原始數據集 -->
 	</DialogContainer>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      excludedIds: [90, 7] // 需要隐藏按钮的 id 数组
+    };
+  },
+  computed: {
+    shouldShowButton() {
+      // 确保 dialogStore.moreInfoContent.id 不在 excludedIds 数组中
+      return this.excludedIds.includes(this.dialogStore.moreInfoContent.id);
+    }
+  },
+  methods: {
+    openrpsPower(){
+
+	}
+  }
+};
+</script>
 
 <style scoped lang="scss">
 .moreinfo {
