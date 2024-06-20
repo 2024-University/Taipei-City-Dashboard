@@ -17,8 +17,8 @@ import { useDialogStore } from "../store/dialogStore";
 import { useAuthStore } from "../store/authStore";
 
 import HistoryChart from "../components/charts/HistoryChart.vue";
-import ReportIssue from "./ReportIssue.vue";
-import ReportStopPower from "./ReportStopPower.vue";
+import ReportIssue from "../components/dialogs/ReportIssue.vue";
+import ReportStopPower from "../components/dialogs/ReportStopPower.vue";
 import DownloadData from "../components/dialogs/DownloadData.vue";
 import EmbedComponent from "../components/dialogs/EmbedComponent.vue";
 
